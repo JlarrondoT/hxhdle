@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HxHdle · MVP V2.1</title>
+    <meta name="description" content="MVP estilo LoLdle para Hunter × Hunter con modos Classic, Quote, Ability, Emoji y Splash." />
+    <link rel="preconnect" href="https://static.wikia.nocookie.net" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="aura aura-a" aria-hidden="true"></div>
+    <div class="aura aura-b" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="hero glass">
+        <div class="brand">
+          <span class="brand__mark">念</span>
+          <div>
+            <p class="eyebrow">Hunter × Hunter daily puzzle</p>
+            <h1>HxHdle</h1>
+            <p class="subtitle">Adivina personajes por deducción, frases, habilidades, emojis y retratos revelados de a poco.</p>
+          </div>
+        </div>
+        <aside class="daily-box">
+          <span>Daily run</span>
+          <strong id="dailyKey">—</strong>
+          <small id="dailyStatus">Cargando dataset...</small>
+        </aside>
+      </header>
+
+      <nav id="modeNav" class="mode-nav glass" aria-label="Modos de juego"></nav>
+
+      <section class="play-area">
+        <aside class="mode-card glass">
+          <div id="modeIcon" class="mode-icon">🎯</div>
+          <p class="eyebrow compact" id="modeStep">Modo 1/5</p>
+          <h2 id="modeTitle">Classic</h2>
+          <p id="modeDescription">Sin pistas: adivina y usa las coincidencias.</p>
+
+          <div id="clueHost" class="clue-host"></div>
+
+          <form id="guessForm" class="guess-form" autocomplete="off">
+            <label for="guessInput">Tu intento</label>
+            <div class="guess-row-input">
+              <input id="guessInput" type="text" placeholder="Ej: Gon Freecss" />
+              <button class="primary-btn" type="submit">Intentar</button>
+            </div>
+            <div id="suggestions" class="suggestions" role="listbox"></div>
+          </form>
+
+          <div class="side-actions">
+            <button id="practiceBtn" class="ghost-btn" type="button">Practice random</button>
+            <button id="dailyBtn" class="ghost-btn" type="button">Volver al daily</button>
+            <button id="resetProgressBtn" class="danger-btn" type="button">Reset progreso</button>
+          </div>
+        </aside>
+
+        <section class="board glass">
+          <div class="board-header">
+            <div>
+              <p class="eyebrow compact">Historial</p>
+              <h2 id="boardTitle">Classic guesses</h2>
+            </div>
+            <div class="legend">
+              <span><i class="dot match"></i>Correcto</span>
+              <span><i class="dot partial"></i>Parcial</span>
+              <span><i class="dot miss"></i>Incorrecto</span>
+              <span><i class="arrow-dot">↑↓</i>Mayor / menor</span>
+            </div>
+          </div>
+
+          <div id="emptyState" class="empty-state">
+            <div>🎯</div>
+            <p>El modo Classic parte sin pistas. Prueba un personaje y deduce según las coincidencias.</p>
+          </div>
+
+          <div id="classicBoard" class="classic-board" hidden></div>
+          <div id="simpleBoard" class="simple-board" hidden></div>
+        </section>
+      </section>
+
+      <section class="progress-strip glass">
+        <article><span>Intentos modo actual</span><strong id="attemptCounter">0</strong></article>
+        <article><span>Modos completados hoy</span><strong id="solvedCounter">0/5</strong></article>
+        <article><span>Dataset</span><strong id="datasetCounter">—</strong></article>
+      </section>
+
+      <footer class="footer-note">
+        <p>MVP fan-made. Dataset local basado en Hunterpedia/Fandom. No afiliado a Yoshihiro Togashi, Shueisha, Nippon Animation, Madhouse ni Viz.</p>
+      </footer>
+    </main>
+
+    <dialog id="resultDialog" class="result-dialog">
+      <div id="resultContent"></div>
+      <form method="dialog" class="dialog-actions">
+        <button id="nextModeBtn" class="primary-btn" type="button">Siguiente modo</button>
+        <button class="ghost-btn">Cerrar</button>
+      </form>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
