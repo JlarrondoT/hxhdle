@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HxHdle · MVP V2.1</title>
+    <title>HxHdle · MVP V2.5</title>
     <meta name="description" content="MVP estilo LoLdle para Hunter × Hunter con modos Classic, Quote, Ability, Emoji y Splash." />
     <link rel="preconnect" href="https://static.wikia.nocookie.net" />
     <link rel="stylesheet" href="styles.css" />
@@ -16,15 +16,15 @@
     <main class="app-shell">
       <header class="hero glass">
         <div class="brand">
-          <span class="brand__mark">念</span>
+          <span class="brand__mark"><i>H×H</i><small>LICENSE</small></span>
           <div>
-            <p class="eyebrow">Hunter × Hunter daily puzzle</p>
-            <h1>HxHdle</h1>
-            <p class="subtitle">Adivina personajes por deducción, frases, habilidades, emojis y retratos revelados de a poco.</p>
+            <p class="eyebrow">Hunter Exam daily puzzle</p>
+            <h1><span class="h-title">H<span class="h-x">x</span>H</span>dle</h1>
+            <p class="subtitle">Rinde el examen: deduce personajes por coincidencias, frases, Nen, emojis y retratos revelados de a poco.</p>
           </div>
         </div>
         <aside class="daily-box">
-          <span>Daily run</span>
+          <span>Hunter License</span>
           <strong id="dailyKey">—</strong>
           <small id="dailyStatus">Cargando dataset...</small>
         </aside>
@@ -34,19 +34,22 @@
 
       <section class="play-area">
         <aside class="mode-card glass">
-          <div id="modeIcon" class="mode-icon">🎯</div>
-          <p class="eyebrow compact" id="modeStep">Modo 1/5</p>
-          <h2 id="modeTitle">Classic</h2>
-          <p id="modeDescription">Sin pistas: adivina y usa las coincidencias.</p>
+          <div class="mode-summary">
+            <div id="modeIcon" class="mode-icon">🎯</div>
+            <p class="eyebrow compact" id="modeStep">Modo 1/5</p>
+            <h2 id="modeTitle">Classic</h2>
+            <p id="modeDescription">Sin pistas: adivina y usa las coincidencias.</p>
+          </div>
 
           <div id="clueHost" class="clue-host"></div>
 
           <form id="guessForm" class="guess-form" autocomplete="off">
-            <label for="guessInput">Tu intento</label>
+            <label for="guessInput">Busca un personaje</label>
             <div class="guess-row-input">
               <input id="guessInput" type="text" placeholder="Ej: Gon Freecss" />
               <button class="primary-btn" type="submit">Intentar</button>
             </div>
+            <small class="search-help">Tip: al hacer click en una sugerencia, el intento se registra automáticamente.</small>
             <div id="suggestions" class="suggestions" role="listbox"></div>
           </form>
 
@@ -88,7 +91,7 @@
       </section>
 
       <footer class="footer-note">
-        <p>MVP fan-made. Dataset local basado en Hunterpedia/Fandom. No afiliado a Yoshihiro Togashi, Shueisha, Nippon Animation, Madhouse ni Viz.</p>
+        <p>MVP fan-made inspirado en el mundo Hunter × Hunter. Dataset local basado en Hunterpedia/Fandom. No afiliado a Yoshihiro Togashi, Shueisha, Nippon Animation, Madhouse ni Viz.</p>
       </footer>
     </main>
 

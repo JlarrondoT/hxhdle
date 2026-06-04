@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0fbf67"/>
+      <stop offset="55%" stop-color="#20110f"/>
+      <stop offset="100%" stop-color="#0b1117"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity=".55"/></filter>
+  </defs>
+  <rect width="420" height="420" fill="url(#g)"/>
+  <path d="M35 68 C120 20, 222 38, 372 18 M24 322 C105 352, 228 334, 398 378" fill="none" stroke="#f6d17a" stroke-opacity=".22" stroke-width="3"/>
+  <circle cx="210" cy="188" r="126" fill="#f6f1e4" opacity=".08"/>
+  <circle cx="210" cy="188" r="98" fill="none" stroke="#f7a800" stroke-opacity=".7" stroke-width="6"/>
+  <text x="210" y="175" text-anchor="middle" font-size="72" fill="#f6f1e4" font-family="Arial, Helvetica, sans-serif" font-weight="900" filter="url(#shadow)">P</text>
+  <text x="210" y="236" text-anchor="middle" font-size="36" fill="#f7a800" font-family="Arial, Helvetica, sans-serif" font-weight="700">🐰📜💬</text>
+  <rect x="36" y="308" width="348" height="70" rx="18" fill="#0b1117" opacity=".72" stroke="#f7a800" stroke-opacity=".55"/>
+  <text x="210" y="336" text-anchor="middle" font-size="22" fill="#f6f1e4" font-family="Arial, Helvetica, sans-serif" font-weight="800">Pyon</text>
+  <text x="210" y="362" text-anchor="middle" font-size="13" fill="#f6d17a" font-family="Arial, Helvetica, sans-serif" font-weight="700">Zodiacs/Hunter Association</text>
+</svg>
